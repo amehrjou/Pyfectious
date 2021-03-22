@@ -1,0 +1,251 @@
+from itertools import islice
+from typing import List
+
+from commands import Quarantine_Single_Community, Unquarantine_Single_Community, \
+    Quarantine_Multiple_Communities, Unquarantine_Multiple_Communities, \
+    Quarantine_Single_Person, Unquarantine_Single_Person, \
+    Quarantine_Multiple_People, Unquarantine_Multiple_People, \
+    Restrict_Certain_Roles, Nope
+from conditions import Time_Point_Condition, Time_Period_Condition, \
+    Statistical_Family_Condition, Statistical_Ratio_Condition, \
+    Statistical_Ratio_Role_Condition
+from json_handle import Parser
+from population_generator import Person, Family, Community
+from time_handle import Time
+
+''' #### Main Vector Structure #####
+
+    Main_Vector = [Command_Vec_1 Command_Vec_2 ... Command_Vec_n]
+
+    n : maximum command size
+    len(Command_Vec_i): M (fixed)
+
+    Command_Vec_i(30): upcode + data
+
+        upcode(1):
+            a two digit code that uniquely determines the command
+
+        data(29):
+            data = condition + values
+
+            condition(9):
+                condition = upcode + data
+
+                upcode(1):
+                    a single digit code to determine the condition class
+
+                data(8):
+                    condition values
+
+            values(20):
+                command values needed to start the operation
+
+'''
+
+COMMAND_VECTOR_LEN = 30
+
+class Decoder:
+
+    def __init__(self, vector, item_len: int= COMMAND_VECTOR_LEN, people: List[Person]= None,
+                    families: List[Family]= None, communities: List[Community]= None):
+
+        if len(vector) % item_len != 0:
+            raise ValueError('vector length is not correct, check COMMAND_VECTOR_LEN!')
+
+        self.vector = vector
+        self.people = people
+        self.families = families
+        self.communities = communities
+        self.item_len = item_len
+
+        # upcode data dictionary
+        self.upcodes = {
+
+            # conditions
+            0 : Time_Point_Condition,
+            1 : Time_Period_Condition,
+            2 : Statistical_Family_Condition,
+            3 : Statistical_Ratio_Condition,
+            4 : Statistical_Ratio_Role_Condition,
+
+            # commands
+            10 : Quarantine_Single_Community,
+            11 : Unquarantine_Single_Community,
+            12 : Quarantine_Multiple_Communities,
+            13 : Unquarantine_Multiple_Communities,
+            14 : Quarantine_Single_Person,
+            15 : Unquarantine_Single_Person,
+            16 : Quarantine_Multiple_People,
+            17 : Unquarantine_Multiple_People,
+            18 : Restrict_Certain_Roles,
+
+            # nope
+            99 : Nope
+        }
+
+    def decode(self):
+        pass
+
+    def build(self):
+        pass
+
+    def json(self):
+        pass
+
+
+class Command_Decoder(Decoder):
+
+    def decode(self) -> str:
+        # slice the vector into command_vec_i
+        command_vectors_list = self.slice_vector()
+
+        # build a list of commands
+        commands_list = self.build(command_vectors_list)
+
+        # build json str of the commands
+        commands_json = self.json(commands_list)
+
+        return commands_json
+
+    def json(self, commands_list):
+        # initialize the json parser
+        parser = Parser()
+
+        # build the json object
+        parser.build_json(commands_list)
+
+        # return the json string
+        return parser.json_string
+
+    def build(self, command_vectors_list):
+        commands_list = list()
+
+        # iterate on command vectors list
+        for command_vector in command_vectors_list:
+            # get the object attributes
+            upcode = command_vector[0] # 1 element top
+            condition_vector = command_vector[1 : 9] # 8 elements top
+            data_vector = command_vector[9 : 29] # 20 elements top
+
+            # get the class name
+            command_class = self.upcodes[upcode]
+            name = command_class.__name__
+
+            # retrieve condition
+            condition = Condition_Decoder(condition_vector, item_len=8).decode()
+
+            if name == Quarantine_Single_Community.__name__ or name == Unquarantine_Single_Community.__name__:
+                community_id = data_vector[0]
+                community_object = None
+
+                # TODO: communities is a two dimensional object!! what to check? -> TYPE _ ID_NUMBER
+                # TODO: fix after commands reformation
+
+                for community in self.communities:
+                    if community.id_number == community_id:
+                        community_object = community
+
+                commands_list.append(command_class(condition, community_object))
+                continue
+
+            if name == Quarantine_Multiple_Communities.__name__ or name == Unquarantine_Multiple_Communities.__name__:
+                community_ids = data_vector
+                communities: List[Community] = list()
+
+                for community in self.communities:
+                    if community.id_number in community_ids:
+                        communities.append(community)
+
+                commands_list.append(command_class(condition, communities))
+                continue
+
+            if name == Quarantine_Single_Person.__name__ or name == Unquarantine_Single_Person.__name__:
+                person_id = data_vector[0]
+                person_object = None
+
+                for person in self.people:
+                    if person.id_number == person_id:
+                        person_object = person
+
+                commands_list.append(command_class(condition, person_object))
+                continue
+
+            if name == Quarantine_Multiple_People.__name__ or name == Unquarantine_Multiple_People.__name__:
+                person_ids = data_vector
+                people: List[Community] = list()
+
+                for person in self.people:
+                    if person.id_number in person_ids:
+                        people.append(person)
+
+                commands_list.append(command_class(condition, people))
+                continue
+
+            if name == Nope.__name__:
+                # nope means an empty command, so no action is  needed
+                continue
+
+            if name == Restrict_Certain_Roles.__name__:
+
+                pass
+
+            raise NotImplementedError('command ', name, ' is not implemented yet!')
+
+        return commands_list
+
+    def slice_vector(self) -> List:
+        # find the vector length and slice length list
+        number_of_vectors = len(self.vector) // self.item_len
+        slice_size_list = [self.item_len for _ in range(number_of_vectors)]
+
+        # using islice break the main vector into a list of command_vec_i
+        command_vectors_list = [list(islice(iter(self.vector), elem)) for elem in slice_size_list]
+        return command_vectors_list
+
+
+class Condition_Decoder(Decoder):
+
+    def decode(self):
+        # get the condition upcode and data
+        condition_class = self.upcodes[self.vector[0]]
+        condition_data = self.vector[1 : 7 + 1]
+
+        # get the condition name
+        name = condition_class.__name__
+
+        # return the correct condition (currently implemented just for time period and time point)
+        if name == Time_Point_Condition.__name__:
+            deadline_minutes = int(condition_data[0])
+
+            # build the time object with the given delta time
+            deadline_time = Time(delta_time=timedelta(minutes=deadline_minutes))
+
+            return condition_class(deadline_time)
+
+        if name == Time_Period_Condition.__name__:
+            period_minutes = int(condition_data[0])
+
+            # build the time object with the given delta time
+            period_time = Time(delta_time=timedelta(minutes=period_minutes))
+
+            return condition_class(period_time)
+
+        # TODO: implement other conditions as well
+        raise NotImplementedError('The condition type is not implemented!')
+
+
+if __name__ == '__main__':
+
+    command_upcode = [14]
+    condition_upcode = [1]
+    condition_data = [30, 0, 0, 0, 0, 0, 0, 0]
+    command_data = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+    vec = command_upcode + condition_upcode + condition_data + command_data
+    print(vec)
+    exit(0)
+
+
+
+
+

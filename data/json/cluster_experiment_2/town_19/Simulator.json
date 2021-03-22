@@ -1,0 +1,38 @@
+{
+    "name": "Simulator",
+    "end_time": {
+        "name": "Time",
+        "minutes": 432000,
+        "unix_time": 1633556421
+    },
+    "spread_period": {
+        "name": "Time",
+        "minutes": 60,
+        "unix_time": 3600
+    },
+    "initialized_infected_ids": [
+        68,
+        17,
+        39,
+        133,
+        126,
+        85
+    ],
+    "commands": [],
+    "observers": [
+        {
+            "name": "Observer",
+            "condition": {
+                "name": "Time_Period_Condition",
+                "period": {
+                    "name": "Time",
+                    "minutes": 720,
+                    "unix_time": 43200
+                }
+            },
+            "observe_people": true,
+            "observe_families": false,
+            "observe_communities": false
+        }
+    ]
+}
