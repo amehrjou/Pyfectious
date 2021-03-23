@@ -50,16 +50,15 @@ The coding style of this project is entirely in accordance with [PEP 8](https://
 If you're curious about the simulator's performance, the following plot incorporates the required time for both simulation and model generation procedures. Clearly, the simulator is designed to have a linear complexity with respect to population growth.
 <img src="data/figure/Simulator_Performance.png" align="center" alt="Simulator_Performance" width="420" height="310" />
 
-This plot is prepared and generated using [Generate_Plots.ipynb](cluster/Generate_Plots.ipynb) notebook.
 ## Contributing
 
 Please read [CONTRIBUTING.md]() for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Authors
 
-* [Amin Abyaneh](https://github.com/PurpleBooth) -- maintainer
-* [Ashkan Soleymani](https://github.com/PurpleBooth) 
-* [Arash Mehrjou](https://github.com/PurpleBooth) 
+* [Amin Abyaneh](https://github.com/aminabyaneh) -- maintainer
+* [Ashkan Soleymani](https://github.com/Ashkan-Soleymani98) 
+* [Arash Mehrjou](https://github.com/amehrjou) 
 
 ## License
 
