@@ -54,6 +54,19 @@ If you're curious about the simulator's performance, the following plot incorpor
 
 Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests to us.
 
+## Citation
+
+Please use the following BibTeX formatted citation:
+
+@misc{mehrjou2021pyfectious,
+      title={Pyfectious: An individual-level simulator to discover optimal containment polices for epidemic diseases}, 
+      author={Arash Mehrjou and Ashkan Soleymani and Amin Abyaneh and Bernhard Schölkopf and Stefan Bauer},
+      year={2021},
+      eprint={2103.15561},
+      archivePrefix={arXiv},
+      primaryClass={q-bio.PE}
+}
+
 ## Authors
 
 * [Amin Abyaneh](https://github.com/aminabyaneh) -- maintainer
