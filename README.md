@@ -58,13 +58,13 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduc
 
 Please use the following BibTeX formatted citation:
 
-@misc{mehrjou2021pyfectious,
-      title={Pyfectious: An individual-level simulator to discover optimal containment polices for epidemic diseases}, 
-      author={Arash Mehrjou and Ashkan Soleymani and Amin Abyaneh and Bernhard Schölkopf and Stefan Bauer},
-      year={2021},
-      eprint={2103.15561},
-      archivePrefix={arXiv},
-      primaryClass={q-bio.PE}
+@misc{mehrjou2021pyfectious,\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title={Pyfectious: An individual-level simulator to discover optimal containment polices for epidemic diseases},\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;author={Arash Mehrjou and Ashkan Soleymani and Amin Abyaneh and Bernhard Schölkopf and Stefan Bauer},\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;year={2021},\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eprint={2103.15561},\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;archivePrefix={arXiv},\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;primaryClass={q-bio.PE}\
 }
 
 ## Authors
