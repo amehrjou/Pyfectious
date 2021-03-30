@@ -6,7 +6,7 @@ These models lack the required granularity to study the effect of policies that 
 
 This embedded probabilistic nature makes the model generic and less dependent on the information of a specific city. Therefore, downstream tasks such as controlling the disease's spread can be evaluated on a set of similar cities, ensuring that the policy is robust to uncertainties in the population model.
 
-Finally, here are some of our experiment results. These experiments are performed on one of our sample towns located in [json folder](data/json). In order to understand how to deploy your first simulation, take a look at the materials introduced in the next section. For further information, refer to our [technical report](). 
+Finally, here are some of our experiment results. These experiments are performed on one of our sample towns located in [json folder](data/json). In order to understand how to deploy your first simulation, take a look at the materials introduced in the next section. For further information, refer to our [technical report](https://arxiv.org/abs/2103.15561). 
 
 <p float="left">
 <img src="data/figure/Normal_Executions_Plus_Average.png" align="center" alt="Normal_Executions_Plus_Average" width="420" height="310" /> <img src="data/figure/Normal_Executions_Plus_Error_Band.png" align="center" alt="Normal_Executions_Plus_Error_Band" width="420" height="310" />
