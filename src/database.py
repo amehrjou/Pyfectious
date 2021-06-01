@@ -35,9 +35,9 @@ class Database:
 
         # connect to sql database in data folder from main working dir
         folder_name = 'sql'
-        if basename(os.path.abspath(os.path.join(os.getcwd(), os.pardir))) == 'covid19_simulator':
+        if basename(os.path.abspath(os.path.join(os.getcwd(), os.pardir))) == 'Pyfectious':
             self.url = os.path.join(os.path.join(os.getcwd(), os.pardir, 'data', folder_name), self.name)
-        elif basename(os.getcwd()) == 'covid19_simulator':
+        elif basename(os.getcwd()) == 'Pyfectious':
             self.url = os.path.join(os.path.join(os.getcwd(), 'data', folder_name), self.name)
         else:
             raise FileNotFoundError('Run the source in "project", "src", or "example" folder!')
