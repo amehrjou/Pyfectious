@@ -701,9 +701,9 @@ class Parser:
             will be thrown.
         """
         # build the file address
-        if basename(os.path.abspath(os.path.join(os.getcwd(), os.pardir))) == 'covid19_simulator':
+        if basename(os.path.abspath(os.path.join(os.getcwd(), os.pardir))) == 'Pyfectious':
             folder_path = os.path.join(os.getcwd(), os.pardir, 'data', 'json', self.folder_name)
-        elif basename(os.getcwd()) == 'covid19_simulator':
+        elif basename(os.getcwd()) == 'Pyfectious':
             folder_path = os.path.join(os.getcwd(), 'data', 'json', self.folder_name)
         else:
             raise FileNotFoundError('Run the source in "project", "src", or "example" folder!')
