@@ -1,4 +1,4 @@
-# PyFectious
+# Pyfectious
 
 Simulating the spread of epidemic diseases in human communities is critical for predicting the disease behaviour and verifying different policies to control the infection. Many existing simulators and models are compartment models, meaning that they divide people into several subsets and simulate the dynamics among those subsets. 
 
@@ -12,8 +12,11 @@ Finally, here are some of our experiment results. These experiments are performe
 <img src="data/figure/Normal_Executions_Plus_Average.png" align="center" alt="Normal_Executions_Plus_Average" width="420" height="310" /> <img src="data/figure/Normal_Executions_Plus_Error_Band.png" align="center" alt="Normal_Executions_Plus_Error_Band" width="420" height="310" />
 </p>
 
-## Getting Started
+## Getting started
 
+Here are some quick instructions about getting familiarized with Pyfectious environment and capabilities.
+
+### General structure
 To acquire a better understanding of the simulator's environment and features, you just need to clone the repository into your local machine. At first glance, the overall structure of the project appears below.
     
     ├── src          # Python source files of the project. 
@@ -24,18 +27,29 @@ To acquire a better understanding of the simulator's environment and features, y
     ├── LICENSE
     └── README.md
 
-Afterward, the best place to start is the [example](example) folder, where there are a couple of notebooks available to get you started with the simulator. A quick description of the notebooks is as the following.
+### Tutorials
+After knowing the general structure of the repository, 
+the best place to start is out comprehensive [Google Colaboratory Notebook](https://colab.research.google.com/drive/1LNOwU-qUjLaHQpqIoKuUZyaNN77BQN3u?usp=sharing), dedicated to explaining 
+fundamental features of Pyfectious and how to perform simulations in the simplest possible way. To use it properly, either download
+the notebook to your personal computer (not recommended) or make a copy on Google Colaboratory (or Google Drive) to save your progress, modifications, and even results.
 
-    ├── example 
-    │   ├── Configured_Simulation.ipynb    # Example of running a pre-configured simulation.
-    │   ├── Manual_Simulation.ipynb        # Tutorial on starting a manual simulation.
-    │   ├── Sanity_Check.ipynb             # Sanity checks related to simulation functionality.
-    │   └── Performance_Test.ipynb         # Measure the simulator's performance on a machine.
 
+Note that when running the notebook on Colaboratory website, there are no requirements to be installed separately, one just needs
+to follow the indicated instructions, and the necessary libraries should get installed automatically. 
+
+To start with the **tutorials** right now, hit the button below:
+
+[![Open In Colaboratory](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1LNOwU-qUjLaHQpqIoKuUZyaNN77BQN3u?usp=sharing)
+
+In case you are not familiar with how Google Colaboratory works, hit the following button to access the **Colaboratory's getting started guide**.
+
+[![Open In Colaboratory](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/notebooks/intro.ipynb)
 
 ### Prerequisites
 
-To access the requirements of the project, you only need to execute the following command. 
+If you wish to run the code or some tutorials locally, you need to install the requirements of the project 
+by executing the following command. 
+
 ```commandline
 pip install -r requirements.txt
 ```
@@ -52,11 +66,11 @@ If you're curious about the simulator's performance, the following plot incorpor
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests to us.
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting **pull requests** to us.
 
 ## Citation
 
-Please use the following BibTeX formatted citation:
+Please use the following BibTeX formatted **citation**:
 
 @article{mehrjou2021pyfectious,\
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title={Pyfectious: An individual-level simulator to discover optimal containment polices for epidemic diseases},\
@@ -67,11 +81,10 @@ Please use the following BibTeX formatted citation:
 
 ## Authors
 
-* [Amin Abyaneh](https://github.com/aminabyaneh) -- maintainer
+* [Amin Abyaneh](https://github.com/aminabyaneh) -- **maintainer**
 * [Ashkan Soleymani](https://github.com/Ashkan-Soleymani98) 
 * [Arash Mehrjou](https://github.com/amehrjou) 
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-

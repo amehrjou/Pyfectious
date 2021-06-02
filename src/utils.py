@@ -323,7 +323,7 @@ class Statistics:
         an infected person will infect on average.
 
         Args:
-            simulator (Simulator): The simulator objectd.
+            simulator (Simulator): The simulator objects.
         """
         t = Texttable()
         t.add_rows([['Parameter', 'Value'],
