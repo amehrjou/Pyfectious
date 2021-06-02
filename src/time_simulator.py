@@ -209,9 +209,9 @@ class Simulator:
         Args:
             model_name (str): The name of the pickle file to be saved.
         """
-        if basename(os.path.abspath(os.path.join(os.getcwd(), os.pardir))) == 'covid19_simulator':
+        if basename(os.path.abspath(os.path.join(os.getcwd(), os.pardir))) == 'Pyfectious':
             path = os.path.join(os.getcwd(), os.pardir, 'data', 'pickle', model_name)
-        elif basename(os.getcwd()) == 'covid19_simulator':
+        elif basename(os.getcwd()) == 'Pyfectious':
             path = os.path.join(os.getcwd(), 'data', 'pickle', model_name)
         else:
             logger.warning('Failed to save model, change directory to src, example, or \
@@ -248,10 +248,10 @@ class Simulator:
         Args:
             model_name (str): The name of the model to be loaded.
         """
-        if basename(os.getcwd()) == 'covid19_simulator':
+        if basename(os.getcwd()) == 'Pyfectious':
             sys.path.insert(1, 'src')
             path = os.path.join(os.getcwd(), 'data', 'pickle', model_name)
-        elif basename(os.path.abspath(os.path.join(os.getcwd(), os.pardir))) == 'covid19_simulator':
+        elif basename(os.path.abspath(os.path.join(os.getcwd(), os.pardir))) == 'Pyfectious':
             sys.path.insert(1, os.path.join(os.pardir, 'src'))
             path = os.path.join(os.getcwd(), os.pardir, 'data', 'pickle', model_name)
         else:
