@@ -39,7 +39,7 @@ to follow the indicated instructions, and the necessary libraries should get ins
 
 To start with the **tutorials** right now, hit the button below:
 
-[![Open In Colaboratory](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1LNOwU-qUjLaHQpqIoKuUZyaNN77BQN3u?usp=sharing)
+[![Open In Colaboratory](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/14UYB9x0g5s7jyHO4DynqDJMXTaSM11eW?usp=sharing)
 
 In case you are not familiar with how Google Colaboratory works, hit the following button to access the **Colaboratory's getting started guide**.
 
