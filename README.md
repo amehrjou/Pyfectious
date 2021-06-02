@@ -20,7 +20,6 @@ Here are some quick instructions about getting familiarized with Pyfectious envi
 To acquire a better understanding of the simulator's environment and features, you just need to clone the repository into your local machine. At first glance, the overall structure of the project appears below.
     
     ├── src          # Python source files of the project. 
-    ├── example      # Tutorials, sanity and performance checks.
     ├── cluster      # Tools and scripts to run on the cluster.
     ├── data         # Simulator's database and configuration files.
     ├── requirements.txt 
