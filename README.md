@@ -29,7 +29,7 @@ To acquire a better understanding of the simulator's environment and features, y
 
 ### Tutorials
 After knowing the general structure of the repository, 
-the best place to start is out comprehensive [Google Colaboratory Notebook](https://colab.research.google.com/drive/1LNOwU-qUjLaHQpqIoKuUZyaNN77BQN3u?usp=sharing), dedicated to explaining 
+the best place to start is our comprehensive [Google Colaboratory Notebook](https://colab.research.google.com/drive/1LNOwU-qUjLaHQpqIoKuUZyaNN77BQN3u?usp=sharing), dedicated to explaining 
 fundamental features of Pyfectious and how to perform simulations in the simplest possible way. To use it properly, either download
 the notebook to your personal computer (not recommended) or make a copy on Google Colaboratory (or Google Drive) to save your progress, modifications, and even results.
 
