@@ -8,9 +8,16 @@ This embedded probabilistic nature makes the model generic and less dependent on
 
 Finally, here are some of our experiment results. These experiments are performed on one of our sample towns located in [json folder](data/json). In order to understand how to deploy your first simulation, take a look at the materials introduced in the next section. For further information, refer to our [technical report](https://arxiv.org/abs/2103.15561). 
 
-<p float="left">
-<img src="data/figure/Normal_Executions_Plus_Average.png" align="center" alt="Normal_Executions_Plus_Average" width="420" height="310" /> <img src="data/figure/Normal_Executions_Plus_Error_Band.png" align="center" alt="Normal_Executions_Plus_Error_Band" width="420" height="310" />
-</p>
+<div style="text-align:center">
+<img src="data/figure/Normal_Executions_Plus_Average.jpg" align="center" alt="Normal_Executions_Plus_Average" width="400" height="300" /> <img src="data/figure/Normal_Executions_Plus_Error_Band.jpg" align="center" alt="Normal_Executions_Plus_Error_Band" width="400" height="300" />
+</div>
+
+---
+
+<div style="text-align:center">
+<img src="data/figure/Policy_Optimization_Curves.jpg" align="center" alt="Normal_Executions_Plus_Average" width="400" height="300" /> <img src="data/figure/Quarantine_Partially_Infected_Effect.jpg" align="center" alt="Normal_Executions_Plus_Error_Band" width="400" height="300" />
+</div>
+
 
 ## Getting started
 
@@ -61,7 +68,11 @@ The coding style of this project is entirely in accordance with [PEP 8](https://
 
 ### Performance 
 If you're curious about the simulator's performance, the following plot incorporates the required time for both simulation and model generation procedures. Clearly, the simulator is designed to have a linear complexity with respect to population growth.
+
+
+<div style="text-align:center">
 <img src="data/figure/Simulator_Performance.png" align="center" alt="Simulator_Performance" width="420" height="310" />
+</div>
 
 ## Contributing
 
