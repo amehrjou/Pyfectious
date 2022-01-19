@@ -6,6 +6,7 @@ from datetime import datetime, timedelta
 from os.path import basename
 from typing import List, Tuple
 
+import numpy as np
 from tqdm.auto import tqdm
 
 from database import Database
@@ -164,8 +165,10 @@ class Simulator:
             spread_period (Time): The spread period of the simulation on which the virus
             spread events are processed.
         """
-        for i in range(0, end_time.get_minutes() + 1, spread_period.get_minutes()):
-            virus_spread_event = Virus_Spread_Event(i, Simulation_Event.VIRUS_SPREAD)
+        for period_start in range(0, end_time.get_minutes() + 1, spread_period.get_minutes()):
+            period_end = period_start + spread_period.get_minutes()
+            virus_spread_time = np.random.uniform(period_start, period_end)
+            virus_spread_event = Virus_Spread_Event(virus_spread_time, Simulation_Event.VIRUS_SPREAD)
             heapq.heappush(self.events, virus_spread_event)
 
     def initialize_infections(self, initialized_infected_ids: List[int]):

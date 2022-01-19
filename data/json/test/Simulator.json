@@ -7,7 +7,7 @@
     },
     "spread_period": {
         "name": "Time",
-        "minutes": 60,
+        "minutes": 5000,
         "unix_time": 3600
     },
     "initialized_infected_ids": [
