@@ -19,7 +19,7 @@ from time_handle import Time
 def build_experiment_results_data_dict(number_of_experiments: int = 16,
                                        experiment_name_constant_part: str = 'data_town_',
                                        folder_name: str = 'data',
-                                       experiment_folder: str = 'cluster_experiment_1',
+                                       experiment_folder: str or None = 'cluster_experiment_1',
                                        add_time: bool = False) -> Dict[int, List[Dict]]:
     """Build a dictionary containing the experiment folders at the first level and the individual
     executions in the second level.
@@ -83,18 +83,19 @@ def build_experiment_results_data_dict(number_of_experiments: int = 16,
         os.chdir(os.path.join(os.getcwd(), os.pardir))
 
     # Use parser to complete the dicts
-    for folder_index in towns_data_dict:
-        json_parser = Parser(os.path.join(experiment_folder, 'town_' + str(folder_index)))
-        simulator = json_parser.parse_simulator()
+    if experiment_folder is not None:
+        for folder_index in towns_data_dict:
+            json_parser = Parser(os.path.join(experiment_folder, 'town_' + str(folder_index)))
+            simulator = json_parser.parse_simulator()
 
-        population_size = simulator.population_generator.population_size
-        immunity_distribution_dict = simulator.disease_properties.immunity_distribution.parameters_dict
-        infectious_rate_dict = simulator.disease_properties.infectious_rate_distribution.parameters_dict
+            population_size = simulator.population_generator.population_size
+            immunity_distribution_dict = simulator.disease_properties.immunity_distribution.parameters_dict
+            infectious_rate_dict = simulator.disease_properties.infectious_rate_distribution.parameters_dict
 
-        for data_dict in towns_data_dict[folder_index]:
-            data_dict['population_size'] = population_size
-            data_dict['immunity_distribution_dict'] = immunity_distribution_dict
-            data_dict['infectious_rate_dict'] = infectious_rate_dict
+            for data_dict in towns_data_dict[folder_index]:
+                data_dict['population_size'] = population_size
+                data_dict['immunity_distribution_dict'] = immunity_distribution_dict
+                data_dict['infectious_rate_dict'] = infectious_rate_dict
 
     return towns_data_dict
 
