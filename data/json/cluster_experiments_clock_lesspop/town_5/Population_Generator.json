@@ -1,0 +1,1561 @@
+{
+  "name": "Population_Generator",
+  "population_size": 10000,
+  "family_patterns": {
+    "0.21": {
+      "name": "Family_Pattern",
+      "number_of_members": 2,
+      "age_distributions": [
+        {
+          "name": "Truncated_Normal_Distribution",
+          "params": {
+            "lower_bound": 20,
+            "upper_bound": 60,
+            "mean": 30,
+            "std": 10
+          }
+        },
+        {
+          "name": "Truncated_Normal_Distribution",
+          "params": {
+            "lower_bound": 30,
+            "upper_bound": 50,
+            "mean": 40,
+            "std": 5
+          }
+        }
+      ],
+      "health_condition_distributions": [
+        {
+          "name": "Truncated_Normal_Distribution",
+          "params": {
+            "lower_bound": 0,
+            "upper_bound": 1,
+            "mean": 0.5,
+            "std": 0.1
+          }
+        },
+        {
+          "name": "Truncated_Normal_Distribution",
+          "params": {
+            "lower_bound": 0,
+            "upper_bound": 1,
+            "mean": 0.5,
+            "std": 0.1
+          }
+        }
+      ],
+      "genders": [
+        0,
+        1
+      ],
+      "location_distribution": {
+        "name": "Two_Variate_iid_Uniform_Distribution",
+        "params": {
+          "x_lower_bound": 0,
+          "x_upper_bound": 100,
+          "y_lower_bound": 0,
+          "y_upper_bound": 100
+        }
+      }
+    },
+    "0.3": {
+      "name": "Family_Pattern",
+      "number_of_members": 3,
+      "age_distributions": [
+        {
+          "name": "Truncated_Normal_Distribution",
+          "params": {
+            "lower_bound": 20,
+            "upper_bound": 50,
+            "mean": 30,
+            "std": 10
+          }
+        },
+        {
+          "name": "Truncated_Normal_Distribution",
+          "params": {
+            "lower_bound": 30,
+            "upper_bound": 50,
+            "mean": 40,
+            "std": 5
+          }
+        },
+        {
+          "name": "Truncated_Normal_Distribution",
+          "params": {
+            "lower_bound": 5,
+            "upper_bound": 20,
+            "mean": 10,
+            "std": 3
+          }
+        }
+      ],
+      "health_condition_distributions": [
+        {
+          "name": "Truncated_Normal_Distribution",
+          "params": {
+            "lower_bound": 0,
+            "upper_bound": 1,
+            "mean": 0.5,
+            "std": 0.1
+          }
+        },
+        {
+          "name": "Truncated_Normal_Distribution",
+          "params": {
+            "lower_bound": 0,
+            "upper_bound": 1,
+            "mean": 0.5,
+            "std": 0.1
+          }
+        },
+        {
+          "name": "Truncated_Normal_Distribution",
+          "params": {
+            "lower_bound": 0,
+            "upper_bound": 1,
+            "mean": 0.5,
+            "std": 0.1
+          }
+        }
+      ],
+      "genders": [
+        0,
+        1,
+        1
+      ],
+      "location_distribution": {
+        "name": "Two_Variate_iid_Uniform_Distribution",
+        "params": {
+          "x_lower_bound": 50,
+          "x_upper_bound": 200,
+          "y_lower_bound": 50,
+          "y_upper_bound": 200
+        }
+      }
+    },
+    "0.19": {
+      "name": "Family_Pattern",
+      "number_of_members": 4,
+      "age_distributions": [
+        {
+          "name": "Truncated_Normal_Distribution",
+          "params": {
+            "lower_bound": 20,
+            "upper_bound": 40,
+            "mean": 30,
+            "std": 5
+          }
+        },
+        {
+          "name": "Truncated_Normal_Distribution",
+          "params": {
+            "lower_bound": 30,
+            "upper_bound": 50,
+            "mean": 40,
+            "std": 5
+          }
+        },
+        {
+          "name": "Truncated_Normal_Distribution",
+          "params": {
+            "lower_bound": 5,
+            "upper_bound": 15,
+            "mean": 10,
+            "std": 3
+          }
+        },
+        {
+          "name": "Truncated_Normal_Distribution",
+          "params": {
+            "lower_bound": 0,
+            "upper_bound": 5,
+            "mean": 2.5,
+            "std": 2
+          }
+        }
+      ],
+      "health_condition_distributions": [
+        {
+          "name": "Truncated_Normal_Distribution",
+          "params": {
+            "lower_bound": 0,
+            "upper_bound": 1,
+            "mean": 0.5,
+            "std": 0.1
+          }
+        },
+        {
+          "name": "Truncated_Normal_Distribution",
+          "params": {
+            "lower_bound": 0,
+            "upper_bound": 1,
+            "mean": 0.5,
+            "std": 0.1
+          }
+        },
+        {
+          "name": "Truncated_Normal_Distribution",
+          "params": {
+            "lower_bound": 0,
+            "upper_bound": 1,
+            "mean": 0.5,
+            "std": 0.1
+          }
+        },
+        {
+          "name": "Truncated_Normal_Distribution",
+          "params": {
+            "lower_bound": 0,
+            "upper_bound": 1,
+            "mean": 0.5,
+            "std": 0.1
+          }
+        }
+      ],
+      "genders": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "location_distribution": {
+        "name": "Two_Variate_iid_Uniform_Distribution",
+        "params": {
+          "x_lower_bound": 0,
+          "x_upper_bound": 200,
+          "y_lower_bound": 0,
+          "y_upper_bound": 100
+        }
+      }
+    },
+    "0.126": {
+      "name": "Family_Pattern",
+      "number_of_members": 1,
+      "age_distributions": [
+        {
+          "name": "Truncated_Normal_Distribution",
+          "params": {
+            "lower_bound": 25,
+            "upper_bound": 50,
+            "mean": 30,
+            "std": 15
+          }
+        }
+      ],
+      "health_condition_distributions": [
+        {
+          "name": "Truncated_Normal_Distribution",
+          "params": {
+            "lower_bound": 0,
+            "upper_bound": 1,
+            "mean": 0.5,
+            "std": 0.1
+          }
+        }
+      ],
+      "genders": [
+        0
+      ],
+      "location_distribution": {
+        "name": "Two_Variate_iid_Uniform_Distribution",
+        "params": {
+          "x_lower_bound": 0,
+          "x_upper_bound": 100,
+          "y_lower_bound": 0,
+          "y_upper_bound": 100
+        }
+      }
+    },
+    "0.124": {
+      "name": "Family_Pattern",
+      "number_of_members": 1,
+      "age_distributions": [
+        {
+          "name": "Truncated_Normal_Distribution",
+          "params": {
+            "lower_bound": 25,
+            "upper_bound": 50,
+            "mean": 30,
+            "std": 15
+          }
+        }
+      ],
+      "health_condition_distributions": [
+        {
+          "name": "Truncated_Normal_Distribution",
+          "params": {
+            "lower_bound": 0,
+            "upper_bound": 1,
+            "mean": 0.5,
+            "std": 0.1
+          }
+        }
+      ],
+      "genders": [
+        1
+      ],
+      "location_distribution": {
+        "name": "Two_Variate_iid_Uniform_Distribution",
+        "params": {
+          "x_lower_bound": 0,
+          "x_upper_bound": 100,
+          "y_lower_bound": 0,
+          "y_upper_bound": 100
+        }
+      }
+    },
+    "0.05": {
+      "name": "Family_Pattern",
+      "number_of_members": 6,
+      "age_distributions": [
+        {
+          "name": "Truncated_Normal_Distribution",
+          "params": {
+            "lower_bound": 20,
+            "upper_bound": 40,
+            "mean": 30,
+            "std": 5
+          }
+        },
+        {
+          "name": "Truncated_Normal_Distribution",
+          "params": {
+            "lower_bound": 30,
+            "upper_bound": 50,
+            "mean": 40,
+            "std": 5
+          }
+        },
+        {
+          "name": "Truncated_Normal_Distribution",
+          "params": {
+            "lower_bound": 5,
+            "upper_bound": 15,
+            "mean": 10,
+            "std": 3
+          }
+        },
+        {
+          "name": "Truncated_Normal_Distribution",
+          "params": {
+            "lower_bound": 5,
+            "upper_bound": 15,
+            "mean": 10,
+            "std": 3
+          }
+        },
+        {
+          "name": "Truncated_Normal_Distribution",
+          "params": {
+            "lower_bound": 5,
+            "upper_bound": 15,
+            "mean": 10,
+            "std": 3
+          }
+        },
+        {
+          "name": "Truncated_Normal_Distribution",
+          "params": {
+            "lower_bound": 0,
+            "upper_bound": 5,
+            "mean": 2.5,
+            "std": 2
+          }
+        }
+      ],
+      "health_condition_distributions": [
+        {
+          "name": "Truncated_Normal_Distribution",
+          "params": {
+            "lower_bound": 0,
+            "upper_bound": 1,
+            "mean": 0.5,
+            "std": 0.1
+          }
+        },
+        {
+          "name": "Truncated_Normal_Distribution",
+          "params": {
+            "lower_bound": 0,
+            "upper_bound": 1,
+            "mean": 0.5,
+            "std": 0.1
+          }
+        },
+        {
+          "name": "Truncated_Normal_Distribution",
+          "params": {
+            "lower_bound": 0,
+            "upper_bound": 1,
+            "mean": 0.5,
+            "std": 0.1
+          }
+        },
+        {
+          "name": "Truncated_Normal_Distribution",
+          "params": {
+            "lower_bound": 0,
+            "upper_bound": 1,
+            "mean": 0.5,
+            "std": 0.1
+          }
+        },
+        {
+          "name": "Truncated_Normal_Distribution",
+          "params": {
+            "lower_bound": 0,
+            "upper_bound": 1,
+            "mean": 0.5,
+            "std": 0.1
+          }
+        },
+        {
+          "name": "Truncated_Normal_Distribution",
+          "params": {
+            "lower_bound": 0,
+            "upper_bound": 1,
+            "mean": 0.5,
+            "std": 0.1
+          }
+        }
+      ],
+      "genders": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "location_distribution": {
+        "name": "Two_Variate_iid_Uniform_Distribution",
+        "params": {
+          "x_lower_bound": 0,
+          "x_upper_bound": 150,
+          "y_lower_bound": 0,
+          "y_upper_bound": 150
+        }
+      }
+    }
+  },
+  "community_types": [
+    {
+      "name": "Community_Type",
+      "sub_community_types": [
+        {
+          "name": "Sub_Community_Type",
+          "community_type_role": {
+            "name": "Community_Type_Role",
+            "age_distribution": {
+              "name": "Truncated_Normal_Distribution",
+              "params": {
+                "lower_bound": 5,
+                "upper_bound": 15,
+                "mean": 10,
+                "std": 1
+              }
+            },
+            "gender_distribution": {
+              "name": "Bernoulli_Distribution",
+              "params": {
+                "p": 0.5
+              }
+            },
+            "time_cycle_distribution": {
+              "name": "Uniform_Whole_Week_Time_Cycle_Distribution",
+              "params": {
+                "start": {
+                  "lower_bound": 300,
+                  "upper_bound": 301
+                },
+                "length": {
+                  "lower_bound": 250,
+                  "upper_bound": 500
+                }
+              }
+            },
+            "is_profession": true,
+            "priority": 1
+          },
+          "number_of_members_distribution": {
+            "name": "UniformSet_Distribution",
+            "params": {
+              "probability_dict": {
+                "30": 1
+              }
+            }
+          },
+          "connectivity_distribution": {
+            "name": "Uniform_Distribution",
+            "params": {
+              "lower_bound": 0.8,
+              "upper_bound": 1
+            }
+          },
+          "sub_community_name": "Student",
+          "transmission_potential_distribution": {
+            "name": "Uniform_Distribution",
+            "params": {
+              "lower_bound": 0.9,
+              "upper_bound": 1
+            }
+          }
+        },
+        {
+          "name": "Sub_Community_Type",
+          "community_type_role": {
+            "name": "Community_Type_Role",
+            "age_distribution": {
+              "name": "Truncated_Normal_Distribution",
+              "params": {
+                "lower_bound": 20,
+                "upper_bound": 40,
+                "mean": 30,
+                "std": 5
+              }
+            },
+            "gender_distribution": {
+              "name": "Bernoulli_Distribution",
+              "params": {
+                "p": 0.5
+              }
+            },
+            "time_cycle_distribution": {
+              "name": "Uniform_Whole_Week_Time_Cycle_Distribution",
+              "params": {
+                "start": {
+                  "lower_bound": 300,
+                  "upper_bound": 301
+                },
+                "length": {
+                  "lower_bound": 250,
+                  "upper_bound": 500
+                }
+              }
+            },
+            "is_profession": true,
+            "priority": 1
+          },
+          "number_of_members_distribution": {
+            "name": "UniformSet_Distribution",
+            "params": {
+              "probability_dict": {
+                "5": 1
+              }
+            }
+          },
+          "connectivity_distribution": {
+            "name": "Uniform_Distribution",
+            "params": {
+              "lower_bound": 0.8,
+              "upper_bound": 1
+            }
+          },
+          "sub_community_name": "Teacher",
+          "transmission_potential_distribution": {
+            "name": "Uniform_Distribution",
+            "params": {
+              "lower_bound": 0.9,
+              "upper_bound": 1
+            }
+          }
+        }
+      ],
+      "sub_community_connectivity_dict": {
+        "0": {
+          "1": {
+            "name": "Uniform_Distribution",
+            "params": {
+              "lower_bound": 0.8,
+              "upper_bound": 1
+            }
+          }
+        },
+        "1": {
+          "0": {
+            "name": "Uniform_Distribution",
+            "params": {
+              "lower_bound": 0.8,
+              "upper_bound": 1
+            }
+          }
+        }
+      },
+      "number_of_communities": 40,
+      "community_name": "School",
+      "location_distribution": {
+        "name": "Two_Variate_iid_Uniform_Distribution",
+        "params": {
+          "x_lower_bound": 0,
+          "x_upper_bound": 100,
+          "y_lower_bound": 0,
+          "y_upper_bound": 100
+        }
+      },
+      "transmission_potential_dict": {
+        "0": {
+          "1": {
+            "name": "Uniform_Distribution",
+            "params": {
+              "lower_bound": 0.9,
+              "upper_bound": 1
+            }
+          }
+        },
+        "1": {
+          "0": {
+            "name": "Uniform_Distribution",
+            "params": {
+              "lower_bound": 0.95,
+              "upper_bound": 1
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Community_Type",
+      "sub_community_types": [
+        {
+          "name": "Sub_Community_Type",
+          "community_type_role": {
+            "name": "Community_Type_Role",
+            "age_distribution": {
+              "name": "Truncated_Normal_Distribution",
+              "params": {
+                "lower_bound": 25,
+                "upper_bound": 60,
+                "mean": 40,
+                "std": 10
+              }
+            },
+            "gender_distribution": {
+              "name": "Bernoulli_Distribution",
+              "params": {
+                "p": 0.5
+              }
+            },
+            "time_cycle_distribution": {
+              "name": "Uniform_Whole_Week_Time_Cycle_Distribution",
+              "params": {
+                "start": {
+                  "lower_bound": 300,
+                  "upper_bound": 301
+                },
+                "length": {
+                  "lower_bound": 250,
+                  "upper_bound": 500
+                }
+              }
+            },
+            "is_profession": true,
+            "priority": 1
+          },
+          "number_of_members_distribution": {
+            "name": "UniformSet_Distribution",
+            "params": {
+              "probability_dict": {
+                "2": 0.1,
+                "5": 0.3,
+                "8": 0.3,
+                "15": 0.3
+              }
+            }
+          },
+          "connectivity_distribution": {
+            "name": "Uniform_Distribution",
+            "params": {
+              "lower_bound": 0.8,
+              "upper_bound": 1
+            }
+          },
+          "sub_community_name": "Worker",
+          "transmission_potential_distribution": {
+            "name": "Uniform_Distribution",
+            "params": {
+              "lower_bound": 0.8,
+              "upper_bound": 1
+            }
+          }
+        }
+      ],
+      "sub_community_connectivity_dict": {},
+      "number_of_communities": 800,
+      "community_name": "Workspace_Medium",
+      "location_distribution": {
+        "name": "Two_Variate_iid_Uniform_Distribution",
+        "params": {
+          "x_lower_bound": 0,
+          "x_upper_bound": 100,
+          "y_lower_bound": 0,
+          "y_upper_bound": 100
+        }
+      },
+      "transmission_potential_dict": {}
+    },
+    {
+      "name": "Community_Type",
+      "sub_community_types": [
+        {
+          "name": "Sub_Community_Type",
+          "community_type_role": {
+            "name": "Community_Type_Role",
+            "age_distribution": {
+              "name": "Truncated_Normal_Distribution",
+              "params": {
+                "lower_bound": 20,
+                "upper_bound": 60,
+                "mean": 30,
+                "std": 10
+              }
+            },
+            "gender_distribution": {
+              "name": "Bernoulli_Distribution",
+              "params": {
+                "p": 0.5
+              }
+            },
+            "time_cycle_distribution": {
+              "name": "Uniform_Whole_Week_Time_Cycle_Distribution",
+              "params": {
+                "start": {
+                  "lower_bound": 300,
+                  "upper_bound": 301
+                },
+                "length": {
+                  "lower_bound": 250,
+                  "upper_bound": 500
+                }
+              }
+            },
+            "is_profession": true,
+            "priority": 1
+          },
+          "number_of_members_distribution": {
+            "name": "UniformSet_Distribution",
+            "params": {
+              "probability_dict": {
+                "50": 0.5,
+                "100": 0.5
+              }
+            }
+          },
+          "connectivity_distribution": {
+            "name": "Uniform_Distribution",
+            "params": {
+              "lower_bound": 0.8,
+              "upper_bound": 1
+            }
+          },
+          "sub_community_name": "Worker",
+          "transmission_potential_distribution": {
+            "name": "Uniform_Distribution",
+            "params": {
+              "lower_bound": 0.8,
+              "upper_bound": 1
+            }
+          }
+        }
+      ],
+      "sub_community_connectivity_dict": {},
+      "number_of_communities": 50,
+      "community_name": "Workspace_Large",
+      "location_distribution": {
+        "name": "Two_Variate_iid_Uniform_Distribution",
+        "params": {
+          "x_lower_bound": 150,
+          "x_upper_bound": 250,
+          "y_lower_bound": 0,
+          "y_upper_bound": 100
+        }
+      },
+      "transmission_potential_dict": {}
+    },
+    {
+      "name": "Community_Type",
+      "sub_community_types": [
+        {
+          "name": "Sub_Community_Type",
+          "community_type_role": {
+            "name": "Community_Type_Role",
+            "age_distribution": {
+              "name": "Truncated_Normal_Distribution",
+              "params": {
+                "lower_bound": 15,
+                "upper_bound": 85,
+                "mean": 35,
+                "std": 20
+              }
+            },
+            "gender_distribution": {
+              "name": "Bernoulli_Distribution",
+              "params": {
+                "p": 0.5
+              }
+            },
+            "time_cycle_distribution": {
+              "name": "Uniform_Whole_Week_Time_Cycle_Distribution",
+              "params": {
+                "start": {
+                  "lower_bound": 1080,
+                  "upper_bound": 1180
+                },
+                "length": {
+                  "lower_bound": 1280,
+                  "upper_bound": 1350
+                }
+              }
+            },
+            "is_profession": false,
+            "priority": 2
+          },
+          "number_of_members_distribution": {
+            "name": "UniformSet_Distribution",
+            "params": {
+              "probability_dict": {
+                "10": 0.5,
+                "15": 0.5
+              }
+            }
+          },
+          "connectivity_distribution": {
+            "name": "Uniform_Distribution",
+            "params": {
+              "lower_bound": 0.95,
+              "upper_bound": 1
+            }
+          },
+          "sub_community_name": "Trainee",
+          "transmission_potential_distribution": {
+            "name": "Uniform_Distribution",
+            "params": {
+              "lower_bound": 0.95,
+              "upper_bound": 1
+            }
+          }
+        },
+        {
+          "name": "Sub_Community_Type",
+          "community_type_role": {
+            "name": "Community_Type_Role",
+            "age_distribution": {
+              "name": "Truncated_Normal_Distribution",
+              "params": {
+                "lower_bound": 20,
+                "upper_bound": 45,
+                "mean": 30,
+                "std": 10
+              }
+            },
+            "gender_distribution": {
+              "name": "Bernoulli_Distribution",
+              "params": {
+                "p": 0.5
+              }
+            },
+            "time_cycle_distribution": {
+              "name": "Uniform_Whole_Week_Time_Cycle_Distribution",
+              "params": {
+                "start": {
+                  "lower_bound": 1080,
+                  "upper_bound": 1180
+                },
+                "length": {
+                  "lower_bound": 1280,
+                  "upper_bound": 1350
+                }
+              }
+            },
+            "is_profession": true,
+            "priority": 1
+          },
+          "number_of_members_distribution": {
+            "name": "UniformSet_Distribution",
+            "params": {
+              "probability_dict": {
+                "5": 0.5,
+                "8": 0.5
+              }
+            }
+          },
+          "connectivity_distribution": {
+            "name": "Uniform_Distribution",
+            "params": {
+              "lower_bound": 0.95,
+              "upper_bound": 1
+            }
+          },
+          "sub_community_name": "Trainer",
+          "transmission_potential_distribution": {
+            "name": "Uniform_Distribution",
+            "params": {
+              "lower_bound": 0.95,
+              "upper_bound": 1
+            }
+          }
+        }
+      ],
+      "sub_community_connectivity_dict": {
+        "0": {
+          "1": {
+            "name": "Uniform_Distribution",
+            "params": {
+              "lower_bound": 0.8,
+              "upper_bound": 1
+            }
+          }
+        },
+        "1": {
+          "0": {
+            "name": "Uniform_Distribution",
+            "params": {
+              "lower_bound": 0.8,
+              "upper_bound": 1
+            }
+          }
+        }
+      },
+      "number_of_communities": 50,
+      "community_name": "Gym",
+      "location_distribution": {
+        "name": "Two_Variate_iid_Uniform_Distribution",
+        "params": {
+          "x_lower_bound": 0,
+          "x_upper_bound": 100,
+          "y_lower_bound": 0,
+          "y_upper_bound": 100
+        }
+      },
+      "transmission_potential_dict": {
+        "0": {
+          "1": {
+            "name": "Uniform_Distribution",
+            "params": {
+              "lower_bound": 0.9,
+              "upper_bound": 1
+            }
+          }
+        },
+        "1": {
+          "0": {
+            "name": "Uniform_Distribution",
+            "params": {
+              "lower_bound": 0.95,
+              "upper_bound": 1
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Community_Type",
+      "sub_community_types": [
+        {
+          "name": "Sub_Community_Type",
+          "community_type_role": {
+            "name": "Community_Type_Role",
+            "age_distribution": {
+              "name": "Truncated_Normal_Distribution",
+              "params": {
+                "lower_bound": 20,
+                "upper_bound": 60,
+                "mean": 30,
+                "std": 10
+              }
+            },
+            "gender_distribution": {
+              "name": "Bernoulli_Distribution",
+              "params": {
+                "p": 0.5
+              }
+            },
+            "time_cycle_distribution": {
+              "name": "Uniform_Whole_Week_Time_Cycle_Distribution",
+              "params": {
+                "start": {
+                  "lower_bound": 150,
+                  "upper_bound": 180
+                },
+                "length": {
+                  "lower_bound": 200,
+                  "upper_bound": 240
+                }
+              }
+            },
+            "is_profession": false,
+            "priority": 1
+          },
+          "number_of_members_distribution": {
+            "name": "UniformSet_Distribution",
+            "params": {
+              "probability_dict": {
+                "1000": 0.5,
+                "1500": 0.5
+              }
+            }
+          },
+          "connectivity_distribution": {
+            "name": "Uniform_Distribution",
+            "params": {
+              "lower_bound": 0.1,
+              "upper_bound": 1
+            }
+          },
+          "sub_community_name": "Rider",
+          "transmission_potential_distribution": {
+            "name": "Uniform_Distribution",
+            "params": {
+              "lower_bound": 0.8,
+              "upper_bound": 1
+            }
+          }
+        }
+      ],
+      "sub_community_connectivity_dict": {},
+      "number_of_communities": 10,
+      "community_name": "Public_Transportation",
+      "location_distribution": {
+        "name": "Two_Variate_iid_Uniform_Distribution",
+        "params": {
+          "x_lower_bound": 150,
+          "x_upper_bound": 250,
+          "y_lower_bound": 0,
+          "y_upper_bound": 100
+        }
+      },
+      "transmission_potential_dict": {}
+    },
+    {
+      "name": "Community_Type",
+      "sub_community_types": [
+        {
+          "name": "Sub_Community_Type",
+          "community_type_role": {
+            "name": "Community_Type_Role",
+            "age_distribution": {
+              "name": "Truncated_Normal_Distribution",
+              "params": {
+                "lower_bound": 8,
+                "upper_bound": 85,
+                "mean": 30,
+                "std": 15
+              }
+            },
+            "gender_distribution": {
+              "name": "Bernoulli_Distribution",
+              "params": {
+                "p": 0.5
+              }
+            },
+            "time_cycle_distribution": {
+              "name": "Uniform_Weekend_Time_Cycle_Distribution",
+              "params": {
+                "start": {
+                  "lower_bound": 1080,
+                  "upper_bound": 1180
+                },
+                "length": {
+                  "lower_bound": 1280,
+                  "upper_bound": 1350
+                }
+              }
+            },
+            "is_profession": false,
+            "priority": 2
+          },
+          "number_of_members_distribution": {
+            "name": "UniformSet_Distribution",
+            "params": {
+              "probability_dict": {
+                "30": 0.5,
+                "50": 0.5
+              }
+            }
+          },
+          "connectivity_distribution": {
+            "name": "Uniform_Distribution",
+            "params": {
+              "lower_bound": 0.95,
+              "upper_bound": 1
+            }
+          },
+          "sub_community_name": "Customer",
+          "transmission_potential_distribution": {
+            "name": "Uniform_Distribution",
+            "params": {
+              "lower_bound": 0.3,
+              "upper_bound": 0.4
+            }
+          }
+        },
+        {
+          "name": "Sub_Community_Type",
+          "community_type_role": {
+            "name": "Community_Type_Role",
+            "age_distribution": {
+              "name": "Truncated_Normal_Distribution",
+              "params": {
+                "lower_bound": 25,
+                "upper_bound": 35,
+                "mean": 30,
+                "std": 5
+              }
+            },
+            "gender_distribution": {
+              "name": "Bernoulli_Distribution",
+              "params": {
+                "p": 0.5
+              }
+            },
+            "time_cycle_distribution": {
+              "name": "Uniform_Weekend_Time_Cycle_Distribution",
+              "params": {
+                "start": {
+                  "lower_bound": 1080,
+                  "upper_bound": 1180
+                },
+                "length": {
+                  "lower_bound": 1280,
+                  "upper_bound": 1350
+                }
+              }
+            },
+            "is_profession": true,
+            "priority": 1
+          },
+          "number_of_members_distribution": {
+            "name": "UniformSet_Distribution",
+            "params": {
+              "probability_dict": {
+                "5": 0.5,
+                "8": 0.5
+              }
+            }
+          },
+          "connectivity_distribution": {
+            "name": "Uniform_Distribution",
+            "params": {
+              "lower_bound": 0.95,
+              "upper_bound": 1
+            }
+          },
+          "sub_community_name": "Staff",
+          "transmission_potential_distribution": {
+            "name": "Uniform_Distribution",
+            "params": {
+              "lower_bound": 0.95,
+              "upper_bound": 1
+            }
+          }
+        }
+      ],
+      "sub_community_connectivity_dict": {
+        "0": {
+          "1": {
+            "name": "Uniform_Distribution",
+            "params": {
+              "lower_bound": 0.8,
+              "upper_bound": 1
+            }
+          }
+        },
+        "1": {
+          "0": {
+            "name": "Uniform_Distribution",
+            "params": {
+              "lower_bound": 0.8,
+              "upper_bound": 1
+            }
+          }
+        }
+      },
+      "number_of_communities": 80,
+      "community_name": "Restaurant",
+      "location_distribution": {
+        "name": "Two_Variate_iid_Uniform_Distribution",
+        "params": {
+          "x_lower_bound": 0,
+          "x_upper_bound": 100,
+          "y_lower_bound": 0,
+          "y_upper_bound": 100
+        }
+      },
+      "transmission_potential_dict": {
+        "0": {
+          "1": {
+            "name": "Uniform_Distribution",
+            "params": {
+              "lower_bound": 0.4,
+              "upper_bound": 0.6
+            }
+          }
+        },
+        "1": {
+          "0": {
+            "name": "Uniform_Distribution",
+            "params": {
+              "lower_bound": 0.4,
+              "upper_bound": 0.6
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Community_Type",
+      "sub_community_types": [
+        {
+          "name": "Sub_Community_Type",
+          "community_type_role": {
+            "name": "Community_Type_Role",
+            "age_distribution": {
+              "name": "Truncated_Normal_Distribution",
+              "params": {
+                "lower_bound": 8,
+                "upper_bound": 85,
+                "mean": 30,
+                "std": 15
+              }
+            },
+            "gender_distribution": {
+              "name": "Bernoulli_Distribution",
+              "params": {
+                "p": 0.5
+              }
+            },
+            "time_cycle_distribution": {
+              "name": "Uniform_Weekend_Time_Cycle_Distribution",
+              "params": {
+                "start": {
+                  "lower_bound": 1080,
+                  "upper_bound": 1180
+                },
+                "length": {
+                  "lower_bound": 1280,
+                  "upper_bound": 1350
+                }
+              }
+            },
+            "is_profession": false,
+            "priority": 2
+          },
+          "number_of_members_distribution": {
+            "name": "UniformSet_Distribution",
+            "params": {
+              "probability_dict": {
+                "60": 0.5,
+                "100": 0.5
+              }
+            }
+          },
+          "connectivity_distribution": {
+            "name": "Uniform_Distribution",
+            "params": {
+              "lower_bound": 0.95,
+              "upper_bound": 1
+            }
+          },
+          "sub_community_name": "Customer",
+          "transmission_potential_distribution": {
+            "name": "Uniform_Distribution",
+            "params": {
+              "lower_bound": 0.3,
+              "upper_bound": 0.4
+            }
+          }
+        },
+        {
+          "name": "Sub_Community_Type",
+          "community_type_role": {
+            "name": "Community_Type_Role",
+            "age_distribution": {
+              "name": "Truncated_Normal_Distribution",
+              "params": {
+                "lower_bound": 25,
+                "upper_bound": 35,
+                "mean": 30,
+                "std": 5
+              }
+            },
+            "gender_distribution": {
+              "name": "Bernoulli_Distribution",
+              "params": {
+                "p": 0.5
+              }
+            },
+            "time_cycle_distribution": {
+              "name": "Uniform_Weekend_Time_Cycle_Distribution",
+              "params": {
+                "start": {
+                  "lower_bound": 1080,
+                  "upper_bound": 1180
+                },
+                "length": {
+                  "lower_bound": 1280,
+                  "upper_bound": 1350
+                }
+              }
+            },
+            "is_profession": true,
+            "priority": 1
+          },
+          "number_of_members_distribution": {
+            "name": "UniformSet_Distribution",
+            "params": {
+              "probability_dict": {
+                "4": 0.5,
+                "6": 0.5
+              }
+            }
+          },
+          "connectivity_distribution": {
+            "name": "Uniform_Distribution",
+            "params": {
+              "lower_bound": 0.95,
+              "upper_bound": 1
+            }
+          },
+          "sub_community_name": "Staff",
+          "transmission_potential_distribution": {
+            "name": "Uniform_Distribution",
+            "params": {
+              "lower_bound": 0.95,
+              "upper_bound": 1
+            }
+          }
+        }
+      ],
+      "sub_community_connectivity_dict": {
+        "0": {
+          "1": {
+            "name": "Uniform_Distribution",
+            "params": {
+              "lower_bound": 0.2,
+              "upper_bound": 0.3
+            }
+          }
+        },
+        "1": {
+          "0": {
+            "name": "Uniform_Distribution",
+            "params": {
+              "lower_bound": 0.2,
+              "upper_bound": 0.5
+            }
+          }
+        }
+      },
+      "number_of_communities": 15,
+      "community_name": "Cinema",
+      "location_distribution": {
+        "name": "Two_Variate_iid_Uniform_Distribution",
+        "params": {
+          "x_lower_bound": 0,
+          "x_upper_bound": 100,
+          "y_lower_bound": 0,
+          "y_upper_bound": 100
+        }
+      },
+      "transmission_potential_dict": {
+        "0": {
+          "1": {
+            "name": "Uniform_Distribution",
+            "params": {
+              "lower_bound": 0.4,
+              "upper_bound": 0.8
+            }
+          }
+        },
+        "1": {
+          "0": {
+            "name": "Uniform_Distribution",
+            "params": {
+              "lower_bound": 0.4,
+              "upper_bound": 0.8
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Community_Type",
+      "sub_community_types": [
+        {
+          "name": "Sub_Community_Type",
+          "community_type_role": {
+            "name": "Community_Type_Role",
+            "age_distribution": {
+              "name": "Truncated_Normal_Distribution",
+              "params": {
+                "lower_bound": 8,
+                "upper_bound": 85,
+                "mean": 30,
+                "std": 15
+              }
+            },
+            "gender_distribution": {
+              "name": "Bernoulli_Distribution",
+              "params": {
+                "p": 0.5
+              }
+            },
+            "time_cycle_distribution": {
+              "name": "Uniform_Whole_Week_Time_Cycle_Distribution",
+              "params": {
+                "start": {
+                  "lower_bound": 1080,
+                  "upper_bound": 1180
+                },
+                "length": {
+                  "lower_bound": 1280,
+                  "upper_bound": 1350
+                }
+              }
+            },
+            "is_profession": false,
+            "priority": 2
+          },
+          "number_of_members_distribution": {
+            "name": "UniformSet_Distribution",
+            "params": {
+              "probability_dict": {
+                "200": 0.4,
+                "300": 0.3,
+                "400": 0.3
+              }
+            }
+          },
+          "connectivity_distribution": {
+            "name": "Uniform_Distribution",
+            "params": {
+              "lower_bound": 0.2,
+              "upper_bound": 1
+            }
+          },
+          "sub_community_name": "Customer",
+          "transmission_potential_distribution": {
+            "name": "Uniform_Distribution",
+            "params": {
+              "lower_bound": 0.1,
+              "upper_bound": 0.3
+            }
+          }
+        },
+        {
+          "name": "Sub_Community_Type",
+          "community_type_role": {
+            "name": "Community_Type_Role",
+            "age_distribution": {
+              "name": "Truncated_Normal_Distribution",
+              "params": {
+                "lower_bound": 25,
+                "upper_bound": 35,
+                "mean": 30,
+                "std": 5
+              }
+            },
+            "gender_distribution": {
+              "name": "Bernoulli_Distribution",
+              "params": {
+                "p": 0.5
+              }
+            },
+            "time_cycle_distribution": {
+              "name": "Uniform_Whole_Week_Time_Cycle_Distribution",
+              "params": {
+                "start": {
+                  "lower_bound": 1080,
+                  "upper_bound": 1180
+                },
+                "length": {
+                  "lower_bound": 1280,
+                  "upper_bound": 1350
+                }
+              }
+            },
+            "is_profession": true,
+            "priority": 1
+          },
+          "number_of_members_distribution": {
+            "name": "UniformSet_Distribution",
+            "params": {
+              "probability_dict": {
+                "40": 0.5,
+                "60": 0.5
+              }
+            }
+          },
+          "connectivity_distribution": {
+            "name": "Uniform_Distribution",
+            "params": {
+              "lower_bound": 0.4,
+              "upper_bound": 1
+            }
+          },
+          "sub_community_name": "Salesman",
+          "transmission_potential_distribution": {
+            "name": "Uniform_Distribution",
+            "params": {
+              "lower_bound": 0.2,
+              "upper_bound": 0.9
+            }
+          }
+        }
+      ],
+      "sub_community_connectivity_dict": {
+        "0": {
+          "1": {
+            "name": "Uniform_Distribution",
+            "params": {
+              "lower_bound": 0.2,
+              "upper_bound": 0.3
+            }
+          }
+        },
+        "1": {
+          "0": {
+            "name": "Uniform_Distribution",
+            "params": {
+              "lower_bound": 0.2,
+              "upper_bound": 0.5
+            }
+          }
+        }
+      },
+      "number_of_communities": 5,
+      "community_name": "Mall",
+      "location_distribution": {
+        "name": "Two_Variate_iid_Uniform_Distribution",
+        "params": {
+          "x_lower_bound": 0,
+          "x_upper_bound": 100,
+          "y_lower_bound": 0,
+          "y_upper_bound": 100
+        }
+      },
+      "transmission_potential_dict": {
+        "0": {
+          "1": {
+            "name": "Uniform_Distribution",
+            "params": {
+              "lower_bound": 0.4,
+              "upper_bound": 0.8
+            }
+          }
+        },
+        "1": {
+          "0": {
+            "name": "Uniform_Distribution",
+            "params": {
+              "lower_bound": 0.4,
+              "upper_bound": 0.8
+            }
+          }
+        }
+      }
+    }
+  ],
+  "distance_function": "euclidean_distance"
+}

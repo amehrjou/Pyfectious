@@ -28,7 +28,7 @@ sys.path.insert(1, os.path.join(os.pardir, 'src'))
 # Import and initialize the parser
 from json_handle import Parser
 
-experiment_folder = 'cluster_experiment_clock'
+experiment_folder = 'cluster_experiment_clock_lesspop'
 parser = Parser(folder_name=os.path.join(experiment_folder, 'town_' + str(i)))
 
 # Load Simulator from JSON file
