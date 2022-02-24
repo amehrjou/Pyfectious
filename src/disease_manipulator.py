@@ -37,7 +37,8 @@ class Disease_Properties:
                  immunity_distribution: Disease_Property_Distribution,
                  disease_period_distribution: Disease_Property_Distribution,
                  death_probability_distribution: Disease_Property_Distribution,
-                 incubation_period_distribution: Disease_Property_Distribution):
+                 incubation_period_distribution: Disease_Property_Distribution,
+                 hospitalization_probability_distribution: Disease_Property_Distribution or None = None):
         """Initialize a disease properties object and create infectious and immunity
         dictionaries.
 
@@ -56,12 +57,17 @@ class Disease_Properties:
 
             death_probability_distribution (Disease_Property_Distribution): This
             determines the probability that the virus kills someone.
+
+            hospitalization_probability_distribution (Disease_Property_Distribution): Sampling from
+            this distribution results in getting a probability of hospitalization between 0 and 1.
+            Defaults to None.
         """
         self.immunity_distribution = immunity_distribution
         self.infectious_rate_distribution = infectious_rate_distribution
         self.disease_period_distribution = disease_period_distribution
         self.death_probability_distribution = death_probability_distribution
         self.incubation_period_distribution = incubation_period_distribution
+        self.hospitalization_probability_distribution = hospitalization_probability_distribution
 
         self.infectious_rate_dict: Dict[int, float] = {}
         self.immunity_dict: Dict[int, float] = {}
@@ -126,6 +132,22 @@ class Disease_Properties:
             float: Period of incubation.
         """
         return self.incubation_period_distribution.sample_single_random_variable(time, person)
+
+    def generate_hospitalization_prob(self, time: Time, person: Person):
+        """Sample the distribution representing the possibility of hospitalization.
+
+        Args:
+            time (Time): Current time in case it affects the distribution.
+            person (Person): The person for whom the period is generated.
+
+        Returns:
+            float: Probability of hospitalization.
+        """
+        sample = 0.00
+        if self.hospitalization_probability_distribution is not None:
+            sample = self.hospitalization_probability_distribution.sample_single_random_variable(time, person)
+
+        return sample
 
     def generate_disease_period(self, time: Time, person: Person):
         """Generate a disease period based on the disease period distribution.

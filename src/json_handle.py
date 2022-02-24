@@ -442,12 +442,18 @@ class Parser:
         death_probability_distribution = self.parse_distribution(self.json_dict['death_probability_distribution'])
         incubation_period_distribution = self.parse_distribution(self.json_dict['incubation_period_distribution'])
 
+        # hospitalization
+        hospitalization_probability_distribution = None
+        if 'hospitalization_probability_distribution' in self.json_dict.keys():
+            hospitalization_probability_distribution = self.parse_distribution(self.json_dict['hospitalization_probability_distribution'])
+
         # build the object
         disease_properties = Disease_Properties(infectious_rate_distribution,
                                                 immunity_distribution,
                                                 disease_period_distribution,
                                                 death_probability_distribution,
-                                                incubation_period_distribution)
+                                                incubation_period_distribution,
+                                                hospitalization_probability_distribution)
         return disease_properties
 
     def parse_population_generator(self) -> Population_Generator:

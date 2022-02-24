@@ -603,6 +603,11 @@ class Incubation_Event(Event):
         """
         self.infection.person.infection_status = Infection_Status.CONTAGIOUS
 
+        # upon the end of incubation period, the person is sent to hospital with a given probability
+        hospitalization_prob = simulator.disease_properties.generate_hospitalization_prob(simulator.clock,
+                                                                                          self.infection.person)
+        self.infection.person.is_hospitalized = Random.flip_coin(hospitalization_prob)
+
         infection_event = Infection_Event(self.infection.ending_time_transmission,
                                           Simulation_Event.INFECTION,
                                           self.infection)
@@ -695,7 +700,7 @@ class Virus_Spread_Event(Event):
         """
         new_infected_ids = list()
         for person in simulator.people:
-            if person.infection_status is Infection_Status.CONTAGIOUS:
+            if person.infection_status is Infection_Status.CONTAGIOUS and not person.is_hospitalized:
                 for edge in person.to_connection_edges:
                     if simulator.people[edge.to_id].infection_status is Infection_Status.CLEAN and \
                             Virus_Spread_Event.is_disease_transmitted(edge, simulator):
@@ -716,7 +721,7 @@ class Virus_Spread_Event(Event):
         Returns:
             bool: True, if the disease is transmitted.
         """
-        # return false if the edge between two people is not activated
+
         if not connection_edge.is_active():
             return False
 

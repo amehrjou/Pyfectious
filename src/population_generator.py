@@ -54,6 +54,8 @@ class Person:
     has_profession (bool): A boolean representing whether the person has a career
     or not.
 
+    is_hospitalized (bool): Determines whether the current person is in hospital or not.
+
     times_of_infection (int): An integer, saving the number of time this person has
     been infected by far.
 
@@ -87,6 +89,7 @@ class Person:
         self.current_location: Place or None = None
 
         self.is_alive = True
+        self.is_hospitalized = False
         self.has_profession = False
         self.times_of_infection = 0
         self.is_quarantined = False
@@ -1304,7 +1307,7 @@ class Population_Generator:
         self.extract_community_roles()
         logger.info('Population Generator created')
 
-    def create_communities_parallel(self, data: (Community_Type, Dict, List[Person])):
+    def create_communities_parallel(self, data: Tuple[Community_Type, Dict, List[Person]]):
         communities_list = list()
 
         for i in range(data[0].number_of_communities):
