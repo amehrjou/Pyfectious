@@ -124,8 +124,10 @@ def retrieve_executions_as_dataframe(experiments_data_dict: Dict[int, List[Dict]
                 times = data_dict['time']
 
             infection['execution ' + str(i)] = data_dict['statistics']
+            print(f'Exec sizes: {len(data_dict["statistics"])}')
 
     infection['time'] = times
+    print(f'Time sizes: {len(times)}')
     return pd.DataFrame(infection)
 
 
@@ -233,19 +235,6 @@ def parse_optimization_trials_result(folder_name: str = 'trials') -> List[hypero
 
 
 if __name__ == '__main__':
-
-    # Change a parameter in all settings
-    # towns_index_list = range(25)
-    # for folder_index in towns_index_list:
-    #     json_parser = Parser(os.path.join('cluster_experiment_0', 'town_' + str(folder_index)))
-    #     disease_properties = json_parser.parse_disease_properties()
-    #
-    #     disease_properties.immunity_distribution = \
-    #         Immunity_Distribution(parameters_dict={"lower_bound": 0.02, "upper_bound": 0.1})
-    #
-    #     json_parser.build_json(disease_properties)
-    #     json_parser.save_json()
-
     towns_index_list = range(38)
     for folder_index in towns_index_list:
         json_parser = Parser('cluster_experiment_2/town_' + str(folder_index))
